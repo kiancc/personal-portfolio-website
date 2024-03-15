@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+form {
+
+}
+
+/* Styling for the submit form */
+/* --------------------------- */
+fieldset {
+    text-align: center;
+    border: 0.3rem solid #000;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+}
+
+legend {
+    font-size: 2em;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: antiquewhite;
+    width: 12rem;
+    border-radius: 1rem;
+    border: 0.3rem solid black;
+    padding: 0.3rem;
+}
+
+label {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    border: 0.2rem solid black;
+    border-radius: 0.4rem;
+    padding-left: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    width: 100%; /* Fills the width of its container */
+    resize: none; /* Prevents users from resizing the textarea */
+  }
+
+#login input[type="Submit"] {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: azure;
+    width: 14rem;
+    padding: 0.3rem;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+}
+
+#login input[type="Submit"]:hover, a:hover {
+    background-color: rgb(250, 219, 179);
+    cursor: pointer;
+}
+/* --------------------------- */
+
+

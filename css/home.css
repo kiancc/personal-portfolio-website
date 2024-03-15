@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    /*background-color: blanchedalmond; */
+    background-color: aquamarine;
+}
+
+header h1 {
+    font-size: 3vw;
+    padding-left: 1em;
+}
+
+h1 {
+    font-size: 4.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+th, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+li, td, th, p {
+    /*font-family: 'Courier New', Courier, monospace;*/
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+td {
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+#title {
+    position: fixed;
+    display: flex;
+    border-bottom: 0.15rem solid black;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Added */
+}
+
+#title ul {
+    display: flex;
+    list-style: none;
+}
+
+#title li {
+    margin-left: 0.1em;
+    padding: 0.4em;
+}
+
+/* styling for link icons*/
+#title a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: antiquewhite;
+    border-radius: 0.7em;
+    padding: 0.8vh;
+    border: 0.2rem solid #000;
+    text-decoration: none;
+    color: inherit;
+}
+
+#title a:hover {
+    background-color: rgb(250, 219, 179);
+    cursor: pointer;
+}
+
+#footer {
+    background-color: white;
+    border-top: 0.15rem solid black;
+    padding: 0.2em;
+}
+
+#footer #signature {
+    text-align: center;
+}
+
+#footer p {
+    font-size: 1rem;
+}
+
+#education, #achievements {
+    margin-top: 10em;
+}
+
+/* sets up grid for content in all elements in the info-container */
+#subcontainer-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+    padding-top: 10em;
+    padding-left: 12em;
+    padding-right: 6em;
+    height: 90vh;
+}
+
+#about-me {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    max-height: 60vh;
+    max-width: 90vh;
+}
+
+#about-me p {
+    max-width: 85vh;
+    margin-bottom: 1em;
+}
+
+#login {
+    grid-row: 2;
+    grid-column: 4/5;
+}
+
+#contact-info {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    padding-left: 7em;
+
+}
+
+#contact-info-section {
+    display: flex;    
+}
+
+#contact-info-links {
+    display: flex;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+#profile-pic {
+    border-radius: 10em;
+    border: solid 0.2em black;
+    height: 20vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* styling for second container */
+
+#subcontainer-2 {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+    padding-left: 12em;
+    padding-right: 6em;
+    padding-bottom: 5em;
+}
+
+#experience {
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+#experience li {
+    font-size: 1.1vw;
+    padding-bottom: 0.5em;
+}
+
+#date {
+    font-size: 1.2vw;
+    font-style: oblique;
+}
+
+#education {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    width: 60vh;
+}
+
+.sub-h1 {
+    font-size: 5vh;
+}
+
+.p-title{
+    font-size: 3vh;
+}
+#education #date {
+    padding-bottom: 1em;
+}
+
+.p-title {
+    font-weight: 430;
+}
+
+#achievements {
+    grid-row: 1/3;
+    grid-column: 3/5;
+    width: 60vh;
+}
+
+#achievements p {
+    padding-bottom: 0.5em;
+}
+
+#achievements li {
+    padding: 0;
+    margin: 0;
+}
+
+#achievements img {
+    height: 5vh;
+    padding-right: 1em;
+}
+
+.achievement {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+#skills {
+    padding-top: 3em;
+    padding-bottom: 8em;
+    grid-row: 4;
+    grid-column: 1/3;
+}
+
+#skills ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#skills li {
+    display: grid;
+    padding-right: 1.5em;
+    text-align: center;
+
+}
+
+#skills p {
+    padding-top: 1rem;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+
+#skills-icon {
+    height: 5vh;
+}
+
+/* styling for card class 
+.card {
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 1rem;
+    
+    border-radius: 3rem;
+    /*background-color: antiquewhite;*/
+    /*border: 0.3rem solid #000;*/
+
+
+.card h1{
+    padding-bottom: 0.5em;
+}
+
+/* Styling for projects */
+/* -------------------- */
+
+.project img {
+    height: 30vh;
+    border-radius: 1em;
+    border: 0.2em solid black;
+}
+
+.project-caption p{
+    font-size: 0.8em;
+}
+
+.project .p-title {
+    border-bottom: 0.15rem solid black;
+    margin-right: 14vh;
+    margin-bottom: 0.5em;
+}
+
+/* grid for projects */
+#subcontainer-3 {
+    padding-top: 10em;
+    padding-left: 12em;
+    padding-right: 6em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#projects td {
+    padding-bottom: 2em;
+}
+  
+.right-column {
+    padding-left: 10em;
+}

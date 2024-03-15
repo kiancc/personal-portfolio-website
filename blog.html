@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+</head>
+<body>
+    <header id="title">
+        <h1><strong>Kian Christian Chong</strong></h1>
+        <nav id="page-navigation">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="homepage.html#subcontainer-1">About Me</a></li>
+                <li><a href="homepage.html#subcontainer-2">Experience</a></li>
+                <li><a href="homepage.html#subcontainer-2">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <div id="main-content">          
+            <div class="blog-container">
+
+                <article id="blog-title" class="card">
+                    <section>
+                        <h1>Blog</h1>
+                    </section>
+                </article>
+                <!--
+                <aside id="add-blog">
+                    <form action="">
+                        <fieldset>
+                
+                            <legend>Add Entry</legend>
+                            <p><input type="text" name="title" placeholder="Title" id="blog-title"></p>
+                            <textarea placeholder="Enter your text" rows="4" cols="50" id="blog-text"></textarea>
+                
+                            <p>
+                                <input type="submit" value="Post">
+                                <input type="submit" value="Clear">
+                            </p>
+                            
+                        </fieldset>
+                    </form>
+                </aside>-->
+
+                <article id="blog-entries">
+                    <div class="blog-entry">  
+                        <h2><strong>Exploring the Potential of Quantum Computing</strong></h2> 
+                        <p id="date">11/03/2024</p> 
+                        <hr>
+                        <p class="p1">Quantum computing, a groundbreaking technology, harnesses the power of quantum mechanics to revolutionize computation. With qubits enabling exponential speed in problem-solving, it promises advancements from cryptography to drug discovery. Challenges persist, but ongoing research and investment signal a promising future, making quantum computing an enticing frontier for university students exploring the forefront of science and technology.</p>
+                    </div>
+
+                    <div class="blog-entry">
+                        <h2><strong>The Rise of Virtual Reality: A Window into New Realms</strong></h2>
+                        <p id="date">08/03/2024</p>
+                        <hr>
+                        <p class="p1">Virtual reality (VR) has swiftly become a game-changer, captivating audiences across industries. Offering immersive experiences that transcend boundaries, VR technology reshapes entertainment, healthcare, and education. Advancements make VR more accessible and realistic, unlocking endless possibilities for university students. From interactive learning to groundbreaking entertainment, VR invites us to explore new realms, blurring the lines between physical and digital worlds. As we embrace VR's rise, we embark on a transformative journey of innovation and discovery.</p>
+                    </div>
+
+                    <div class="blog-entry">
+                        <h2><strong>Cloud Computing and IoT Revolution</strong></h2>
+                        <p id="date">02/03/2024</p>
+                        <hr>
+                        <p class="p1">The fusion of cloud computing and the Internet of Things (IoT) is reshaping technology. Cloud infrastructure supports IoT devices, facilitating data storage, processing, and analysis. This synergy enables real-time insights and innovation in various sectors. For students, grasping this relationship unlocks opportunities in smart cities, healthcare, and more. Embracing this partnership, we shape a connected, intelligent future.</p>
+                    </div>
+                </article>
+
+                <aside id="login">
+                    <form action="">
+                        <fieldset>
+                            <legend><strong>Login</strong></legend>
+                            <label>Username</label>
+                            <p><input type="email" name="username" placeholder="Email Address"></p>
+                            
+                            <label>Password</label>
+                            <p><input type="password" name="password" placeholder="Password" pattern=""></p>
+        
+                            <p><input type="submit" value="Submit"></p>  
+                        </fieldset>
+                    </form>
+                </aside>
+            </div>
+        </div>
+        <footer id="footer">
+            <section id="signature">
+                <p>Kian Chong 2024 &copy;</p>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
