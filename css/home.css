@@ -175,6 +175,17 @@ td {
     width: 60vh;
 }
 
+#education div  {
+    padding-bottom: 2em;
+}
+
+#grades td{
+    font-size: 1.8vh;
+    padding-left: 2em;
+}
+
+
+
 .sub-h1 {
     font-size: 5vh;
 }
@@ -182,8 +193,9 @@ td {
 .p-title{
     font-size: 3vh;
 }
+
 #education #date {
-    padding-bottom: 1em;
+    font-weight: 400;
 }
 
 .p-title {
