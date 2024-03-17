@@ -54,7 +54,7 @@ td {
 }
 
 /* styling for link icons in title and login button*/
-#title nav a, #login a {
+#title nav a {
     background-color: antiquewhite;
     border-radius: 0.7em;
     padding: 0.8vh;

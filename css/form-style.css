@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-form {
 
-}
-
-/* Styling for the submit form */
+/* Styling for the form */
 /* --------------------------- */
 fieldset {
     text-align: center;
@@ -34,14 +31,16 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
     border-radius: 0.4rem;
     padding-left: 0.5rem;
     font-family: 'Poppins', sans-serif;
+    max-width: 85%;
 }
 
 textarea {
     width: 100%; /* Fills the width of its container */
+    height: 25vh;
     resize: none; /* Prevents users from resizing the textarea */
-  }
+}
 
-#login input[type="Submit"] {
+#login input[type="Submit"], #add-blog input[type="Submit"] {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
@@ -49,13 +48,13 @@ textarea {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     background-color: azure;
-    width: 14rem;
+    width: 10rem;   
     padding: 0.3rem;
     border: 0.2rem solid black;
     border-radius: 1rem;
 }
 
-#login input[type="Submit"]:hover {
+#login input[type="Submit"]:hover, #add-blog input[type="Submit"]:hover {
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }

@@ -7,6 +7,7 @@ body {
     height: 100vh;
 }
 
+/* Header Styles */
 header h1 {
     font-size: 3vw;
     padding-left: 1em;
@@ -24,6 +25,7 @@ th, a {
     color: inherit;
 }
 
+/* Common Text Styles */
 li, td, th, p {
     /*font-family: 'Courier New', Courier, monospace;*/
     font-family: "IBM Plex Sans", sans-serif;
@@ -36,15 +38,17 @@ td {
     font-size: 1.5vw;
 }
 
+/* Styling for the top title page, laying out info horizontally*/
 #title {
     display: flex;
     border-bottom: 0.15rem solid black;
     background-color: white;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Added */
+    width: 100%; 
 }
 
+/* styling for list of links, making them horizontal and removing list stylin*/
 #title ul {
     display: flex;
     list-style: none;
@@ -56,7 +60,7 @@ td {
 }
 
 /* styling for link icons in title and login button*/
-#title nav a, #login a {
+#title nav a, .big-button a {
     background-color: antiquewhite;
     border-radius: 0.7em;
     padding: 0.8vh;
@@ -68,7 +72,7 @@ td {
     font-weight: 500;
 }
 
-#title nav a:hover, #login a:hover{
+#title nav a:hover, .big-button a:hover{
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
@@ -96,7 +100,7 @@ td {
 /* ------------------------------------- */
 
 /* sets up grid for content in all elements in the info-container */
-#subcontainer-1 {
+#index-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(0, auto);
@@ -148,13 +152,13 @@ td {
     font-size: 2.5vh;
 }
 
-#login {
+#login, #add-post {
     grid-row: 2/4;
     grid-column: 3/3;
     padding-top: 2em;
 }
 
-#login a {
+.big-button a {
     font-size: 3em;
     font-weight: 600;
 }
@@ -177,18 +181,28 @@ td {
     grid-auto-rows: minmax(0, auto);
     align-items: start;
     padding-top: 5em;
-    padding-left: 25vw;
+    padding-left: 12em;
     padding-right: 6em;
+    padding-bottom: 4em;
 }
 
 #experience {
     width: 80vw;
 }
 
+#experience .job {
+    padding-left: 5vw;
+}
+
 #experience li {
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     padding-bottom: 0.5em;
-    
+    max-width: 60vw;
+}
+
+#experience .p-title {
+    font-size: 2vw;
+    font-weight: 600;
 }
 /* ------------------------------------- */
 
@@ -198,16 +212,11 @@ td {
 /* and Skill sections.                   */
 /* ------------------------------------- */
 
-/* Adds space between top of page and elements*/
-#education, #achievements {
-    margin-top: 5em;
-}
-
 .sub-h1 {
     font-size: 5vh;
 }
 
-#subcontainer-2 {
+#education-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(0, auto);
@@ -223,6 +232,7 @@ td {
 }
 
 #education {
+    margin-top: 5em;
     grid-row: 1/3;
     grid-column: 1/3;
     width: 60vh;
@@ -247,6 +257,7 @@ td {
 }
 
 #achievements {
+    margin-top: 6.5em;
     grid-row: 1/2;
     grid-column: 3/5;
     width: 60vh;
@@ -325,6 +336,7 @@ td {
 
 .project img {
     height: 30vh;
+    width: 50vh;
     border-radius: 1em;
     border: 0.2em solid black;
 }
@@ -334,13 +346,12 @@ td {
 }
 
 .project .p-title {
-    border-bottom: 0.15rem solid black;
     margin-right: 14vh;
     margin-bottom: 0.5em;
 }
 
 /* grid for projects */
-#subcontainer-3 {
+#project-container {
     padding-top: 5em;
     padding-left: 12em;
     padding-right: 6em;
@@ -366,33 +377,58 @@ table {
 /* ------------------------------------- */
 #blog-container {
     padding-top: 5em;
-    padding-left: 25vw;
+    padding-left: 12em;
     padding-right: 6em;
+    padding-bottom: 5em;
 }
 
+/* This aligns h2 elements side by side with space between*/
 #blog-title {
-    grid-row: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    
 }
-
     
 #blog-entries h2 {
     font-size: 4vh;
     font-family: 'Poppins', sans-serif;
 }
 
-
 .blog-entry {
-    width: 100vh;
+    max-width: 130vh;
     grid-row: 2;
+    padding-left: 5vw;
+    padding-bottom: 2em;
 }
 
-
 #blog-entries .p1 {
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 
 #date {
     font-size: 1.2vw;
     font-style: oblique;
+}
+/* ------------------------------------- */
+
+
+/* ------------------------------------- */
+/* styling for add post                  */
+/* ------------------------------------- */
+/* this centralises the blog form*/
+#add-blog {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+#add-blog p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#add-blog #post-title {
+    font-size: 3vh;
 }
 /* ------------------------------------- */
