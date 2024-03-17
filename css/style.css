@@ -10,6 +10,7 @@ body {
 header h1 {
     font-size: 3vw;
     padding-left: 1em;
+    
 }
 
 h1 {
@@ -19,6 +20,8 @@ h1 {
 
 th, a {
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: inherit;
 }
 
 li, td, th, p {
@@ -53,13 +56,11 @@ td {
 }
 
 /* styling for link icons in title and login button*/
-#title a, #login a {
+#title nav a, #login a {
     background-color: antiquewhite;
     border-radius: 0.7em;
     padding: 0.8vh;
     border: 0.2rem solid #000;
-    text-decoration: none;
-    color: inherit;
 }
 
 #title a {
@@ -67,7 +68,7 @@ td {
     font-weight: 500;
 }
 
-#title a:hover, #login a:hover{
+#title nav a:hover, #login a:hover{
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
