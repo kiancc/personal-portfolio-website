@@ -9,42 +9,45 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <header id="title">
-        <h1><strong>Kian Christian Chong</strong></h1>
-        <nav id="page-navigation">
-            <ul>
-                <li><a href="homepage.html#subcontainer-1">About Me</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <aside>
-        <form action="">
-            <fieldset id="login">
-
-                <label>Username</label>
-                <p><input type="text" name="username" placeholder="Email Address"></p>
-                
-                <label>Password</label>
-                <p><input type="text" name="password" placeholder="Password" pattern=""></p>
-
-                <p><input type="submit" value="Login"></p>
-                
-            </fieldset>
-        </form>
-    </aside>
-    
-    <section id="bottom">
-        <footer>
-            <nav>
-                <a href="home.html">Home</a>
-                </nav>
+    <div id="container">
+        <header id="title">
+            <h1><strong>Kian Christian Chong</strong></h1>
+            <nav id="page-navigation">
+                <ul>
+                    <li><a href="homepage.html">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
             </nav>
+        </header>
+
+        <div id="main-content">
+            <section id="login">
+                <form action="">
+                    <fieldset>
+                        <legend><strong>Login</strong></legend>
+                        <label>Username</label>
+                        <p><input type="email" name="username" placeholder="Email Address"></p>
+                        
+                        <label>Password</label>
+                        <p><input type="password" name="password" placeholder="Password" pattern=""></p>
+    
+                        <p><input type="submit" value="Submit"></p>
+                        
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <section id="signature">
+                <p>Kian Chong 2024 &copy;</p>
+            </section>
         </footer>
-    </section>
+    </div>
+    
+
 </body>
 </html>

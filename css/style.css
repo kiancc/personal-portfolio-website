@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    /*background-color: blanchedalmond; */
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+header h1 {
+    font-size: 3vw;
+    padding-left: 1em;
+}
+
+h1 {
+    font-size: 4.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+th, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+li, td, th, p {
+    /*font-family: 'Courier New', Courier, monospace;*/
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+td {
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+#title {
+    display: flex;
+    border-bottom: 0.15rem solid black;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Added */
+}
+
+#title ul {
+    display: flex;
+    list-style: none;
+}
+
+#title li {
+    margin-left: 0.1em;
+    padding: 0.4em;
+}
+
+/* styling for link icons in title and login button*/
+#title a, #login a {
+    background-color: antiquewhite;
+    border-radius: 0.7em;
+    padding: 0.8vh;
+    border: 0.2rem solid #000;
+    text-decoration: none;
+    color: inherit;
+}
+
+#title a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#title a:hover, #login a:hover{
+    background-color: rgb(250, 219, 179);
+    cursor: pointer;
+}
+
+/* Styling for footer element*/
+#footer {
+    background-color: white;
+    border-top: 0.15rem solid black;
+    padding: 0.2em;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
+#footer #signature {
+    text-align: center;
+}
+
+#footer p {
+    font-size: 1rem;
+}
+
+/* ------------------------------------- */
+/* Styling for the about me section*/
+/* ------------------------------------- */
+
+/* sets up grid for content in all elements in the info-container */
+#subcontainer-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+    padding-top: 5em;
+    padding-left: 12em;
+    padding-right: 6em;
+}
+
+#about-me {
+    grid-row: 1;
+    grid-column: 1/3;
+    max-height: 60vh;
+    max-width: 100vh;
+}
+
+#profile-pic {
+    grid-row: 1;
+    grid-column: 3;   
+    padding-top: 2em;
+}
+
+#profile-pic img {
+    border-radius: 20vh;
+    border: solid 0.2em black;
+    height: 35vh;
+}
+
+#contact-info {
+    margin-top: 3em;
+    grid-row: 2/4;
+    grid-column: 1/3;
+}
+
+#contact-info img {
+    height: 5vh;
+    width: 5vh;
+}
+
+#contact-info section {
+    display: flex;
+}
+
+#contact-info img {
+    padding-right: 2em;
+}
+
+#contact-info p {
+    font-size: 2.5vh;
+}
+
+#login {
+    grid-row: 2/4;
+    grid-column: 3/3;
+    padding-top: 2em;
+}
+
+#login a {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+/* aligns login and img to center of respective grid cells*/
+#login, #profile-pic {
+    padding-right: 5em;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+/* ------------------------------------- */
+
+/* ------------------------------------- */
+/* styling for experience                */
+/* ------------------------------------- */
+#experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+    padding-top: 5em;
+    padding-left: 25vw;
+    padding-right: 6em;
+}
+
+#experience {
+    width: 80vw;
+}
+
+#experience li {
+    font-size: 1.1vw;
+    padding-bottom: 0.5em;
+    
+}
+/* ------------------------------------- */
+
+
+/* ------------------------------------- */
+/* styling for Education, Achievements   */
+/* and Skill sections.                   */
+/* ------------------------------------- */
+
+/* Adds space between top of page and elements*/
+#education, #achievements {
+    margin-top: 5em;
+}
+
+.sub-h1 {
+    font-size: 5vh;
+}
+
+#subcontainer-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+    padding-left: 12em;
+    padding-right: 6em;
+    padding-bottom: 5em;
+}
+
+#date {
+    font-size: 1.2vw;
+    font-style: oblique;
+}
+
+#education {
+    grid-row: 1/3;
+    grid-column: 1/3;
+    width: 60vh;
+}
+
+#education div {
+    padding-bottom: 2em;
+}
+
+#grades td{
+    font-size: 1.8vh;
+    padding-left: 2em;
+}
+
+.p-title{
+    font-size: 3vh;
+    font-weight: 430;
+}
+
+#education #date {
+    font-weight: 400;
+}
+
+#achievements {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    width: 60vh;
+}
+
+#achievements p {
+    padding-bottom: 0.5em;
+    font-weight: 400;
+}
+
+#achievements li {
+    padding: 0;
+    margin: 0;
+}
+
+#achievements img {
+    height: 5vh;
+    padding-right: 1em;
+}
+
+.achievement {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+#skills {
+    padding-top: 3em;
+    grid-row: 2;
+    grid-column: 3/3;
+}
+
+#skills ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#skills li {
+    display: grid;
+    padding-right: 1.5em;
+    text-align: center;
+
+}
+
+#skills p {
+    padding-top: 1rem;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+
+#skills img {
+    height: 5vh;
+    width: 5vh;
+}
+/* ------------------------------------- */
+
+/* styling for card class 
+.card {
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 1rem;
+    
+    border-radius: 3rem;
+    /*background-color: antiquewhite;*/
+    /*border: 0.3rem solid #000;*/
+
+
+.card h1{
+    padding-bottom: 0.5em;
+}
+
+/* ------------------------------------- */
+/* Styling for projects                  */
+/* ------------------------------------- */
+
+
+.project img {
+    height: 30vh;
+    border-radius: 1em;
+    border: 0.2em solid black;
+}
+
+.project-caption p{
+    font-size: 0.8em;
+}
+
+.project .p-title {
+    border-bottom: 0.15rem solid black;
+    margin-right: 14vh;
+    margin-bottom: 0.5em;
+}
+
+/* grid for projects */
+#subcontainer-3 {
+    padding-top: 5em;
+    padding-left: 12em;
+    padding-right: 6em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#projects td {
+    padding-bottom: 2em;
+}
+
+
+.right-column {
+    padding-left: 10em;
+}
+/* ------------------------------------- */
+
+
+/* ------------------------------------- */
+/* styling for blog page                 */
+/* ------------------------------------- */
+#blog-container {
+    padding-top: 5em;
+    padding-left: 25vw;
+    padding-right: 6em;
+}
+
+#blog-title {
+    grid-row: 1;
+}
+
+    
+#blog-entries h2 {
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.blog-entry {
+    width: 100vh;
+    grid-row: 2;
+}
+
+
+#blog-entries .p1 {
+    font-size: 2vh;
+}
+
+#date {
+    font-size: 1.2vw;
+    font-style: oblique;
+}
+/* ------------------------------------- */

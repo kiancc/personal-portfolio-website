@@ -89,8 +89,6 @@ td {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(0, auto);
     align-items: start;
-    padding-left: 12em;
-    padding-right: 6em;
 }
 
 #blog-title {
@@ -98,12 +96,12 @@ td {
 }
 
 #blog-entries {
-    padding-left:6em;
     grid-row: 1/5;
     grid-column: 2/3;
 }
 
 .blog-entry {
+    text-align: center;
     margin: 2em 2em;
     padding: 1em 1em;
     width: 100vh;
