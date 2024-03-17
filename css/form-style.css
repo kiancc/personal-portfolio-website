@@ -26,7 +26,7 @@ label {
     font-family: 'Poppins', sans-serif;
 }
 
-input[type="text"], input[type="password"], input[type="email"], textarea {
+input[type="text"], input[type="password"], input[type="Reset"], input[type="email"], textarea {
     border: 0.2rem solid black;
     border-radius: 0.4rem;
     padding-left: 0.5rem;
@@ -40,7 +40,7 @@ textarea {
     resize: none; /* Prevents users from resizing the textarea */
 }
 
-#login input[type="Submit"], #add-blog input[type="Submit"] {
+#login input[type="Submit"], input[type="Reset"], #add-blog input[type="Submit"] {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
@@ -54,7 +54,7 @@ textarea {
     border-radius: 1rem;
 }
 
-#login input[type="Submit"]:hover, #add-blog input[type="Submit"]:hover {
+#login input[type="Submit"]:hover, input[type="Reset"]:hover, #add-blog input[type="Submit"]:hover {
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
