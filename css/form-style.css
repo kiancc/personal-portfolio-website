@@ -55,7 +55,7 @@ textarea {
     border-radius: 1rem;
 }
 
-#login input[type="Submit"]:hover, a:hover {
+#login input[type="Submit"]:hover, {
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
