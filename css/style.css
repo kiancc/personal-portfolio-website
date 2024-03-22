@@ -9,13 +9,12 @@ body {
 
 /* Header Styles */
 header h1 {
-    font-size: 3vw;
+    font-size: 3em;
     padding-left: 1em;
-    
 }
 
 h1 {
-    font-size: 4.5vw;
+    font-size: 4.5em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -30,15 +29,18 @@ li, td, th, p {
     /*font-family: 'Courier New', Courier, monospace;*/
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 2em;
 }
 
 td {
     justify-content: center;
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 
-/* Styling for the top title page, laying out info horizontally*/
+/* ----------------------------------------- */
+/* Styling for the top title page and footer */
+/* laying out info horizontally              */
+/* ----------------------------------------- */
 #title {
     display: flex;
     border-bottom: 0.15rem solid black;
@@ -47,6 +49,7 @@ td {
     justify-content: space-between;
     width: 100%; 
 }
+
 
 /* styling for list of links, making them horizontal and removing list stylin*/
 #title ul {
@@ -94,6 +97,7 @@ td {
 #footer p {
     font-size: 1rem;
 }
+/* ----------------------------------------- */
 
 /* ------------------------------------- */
 /* Styling for the about me section*/
@@ -146,10 +150,6 @@ td {
 
 #contact-info img {
     padding-right: 2em;
-}
-
-#contact-info p {
-    font-size: 2.5vh;
 }
 
 #login, #add-post {
@@ -213,7 +213,7 @@ td {
 /* ------------------------------------- */
 
 .sub-h1 {
-    font-size: 5vh;
+    font-size: 3.5em;
 }
 
 #education-container {
@@ -406,10 +406,6 @@ table {
     font-size: 2.5vh;
 }
 
-#date {
-    font-size: 1.2vw;
-    font-style: oblique;
-}
 /* ------------------------------------- */
 
 
