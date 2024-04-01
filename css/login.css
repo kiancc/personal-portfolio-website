@@ -37,15 +37,21 @@ td {
     font-size: 1.5em;
 }
 
+/* ----------------------------------------- */
+/* Styling for the top title page and footer */
+/* laying out info horizontally              */
+/* ----------------------------------------- */
 #title {
     display: flex;
     border-bottom: 0.15rem solid black;
     background-color: white;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Added */
+    width: 100%; 
 }
 
+
+/* styling for list of links, making them horizontal and removing list stylin*/
 #title ul {
     display: flex;
     list-style: none;
@@ -57,7 +63,7 @@ td {
 }
 
 /* styling for link icons in title and login button*/
-#title nav a {
+#title nav a, .big-button a {
     background-color: antiquewhite;
     border-radius: 0.7em;
     padding: 0.8vh;
@@ -69,7 +75,7 @@ td {
     font-weight: 500;
 }
 
-#title nav a:hover, #login a:hover{
+#title nav a:hover, .big-button a:hover{
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
@@ -91,6 +97,7 @@ td {
 #footer p {
     font-size: 1rem;
 }
+/* ----------------------------------------- */
 
 #main-content {
     width: 100%;
