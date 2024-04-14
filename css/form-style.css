@@ -40,7 +40,7 @@ textarea {
     resize: none; /* Prevents users from resizing the textarea */
 }
 
-#login input[type="Submit"], input[type="Reset"], #add-blog input[type="Submit"], #add-blog input[type="button"] {
+#login input[type="Submit"], input[type="Reset"], #add-blog input[type="Submit"], #add-blog input[type="button"], #register-button p {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;

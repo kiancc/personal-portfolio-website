@@ -82,6 +82,8 @@ td {
 
 /* Styling for footer element*/
 #footer {
+    display: flex;
+    align-items: center;
     background-color: white;
     border-top: 0.15rem solid black;
     padding: 0.2em;
@@ -90,12 +92,14 @@ td {
     width: 100%;
 }
 
-#footer #signature {
-    text-align: center;
-}
-
 #footer p {
     font-size: 1rem;
+}
+
+#footer #log-footer input {
+    border: none;
+    color: inherit;
+    font: inherit;
 }
 /* ----------------------------------------- */
 
@@ -397,10 +401,17 @@ table {
 }
 
 .blog-entry {
-    max-width: 130vh;
-    grid-row: 2;
-    padding-left: 5vw;
+    max-width: 95%;
+    grid-row: 2;    
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-right: 2em;
+    margin-right: 2em;
     padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-radius: 2rem;
+    background-color: antiquewhite;
+    border: 0.3rem solid #000;
 }
 
 #blog-entries .p1 {

@@ -158,9 +158,15 @@
         </aside>
 -->
         <footer id="footer">
-
-            <section id="signature">
+            <section id="log-footer">
                 <p>Kian Chong 2024 &copy;</p>
+                <?php 
+                    if(!isset($_SESSION['UserID'])) {
+                        echo '<a href="login.html">Login</a>';
+                    } else {
+                        echo '<a href="logout.php">Logout</a>';
+                    }
+                ?>
             </section>
         </footer>
     </div>

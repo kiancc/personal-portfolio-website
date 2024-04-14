@@ -35,6 +35,8 @@
                         session_destroy();
                         if (!isset($_SESSION['UserID'])) {
                             echo "<p>You are now logged out.</p>";
+                            echo '<script>window.alert("message successfully sent")</script>';
+                            header("Location: index.php");
                         } else {
                             echo "<p>Something went wrong.</p>";
                         }

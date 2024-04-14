@@ -56,14 +56,16 @@
                         // redirects to addpost if logged in <-- check whether to implement
                         // redirects to login.html if no entries
                         if ($result->num_rows == 0) {
-                            header("Location: login.html");
+                            header("Location: login.php");
                             exit;
                         }
                         while ($row = $result->fetch_assoc()) {
                         
                             echo '<div class="blog-entry">
-                                    <h2><strong>'.$row['title'].'</strong></h2>
-                                    <p id="date">'.$row['dateTime'].'</p>
+                                    <div class="sub-blog-title">
+                                        <h2><strong>'.$row['title'].'</strong></h2>
+                                        <p id="date">'.$row['dateTime'].'</p>
+                                    </div>
                                     <hr>
                                     <p class="p1">'.$row['text'].'</p>
                                 </div>';
@@ -73,9 +75,17 @@
                 </article>
             </div>
         </div>
+        
         <footer id="footer">
-            <section id="signature">
+            <section id="log-footer">
                 <p>Kian Chong 2024 &copy;</p>
+                <?php 
+                    if(!isset($_SESSION['UserID'])) {
+                        echo '<a href="login.html">Login</a>';
+                    } else {
+                        echo '<a href="logout.php">Logout</a>';
+                    }
+                ?>
             </section>
         </footer>
     </div>
