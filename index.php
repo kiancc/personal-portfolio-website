@@ -57,9 +57,18 @@
                     </section>
                 </aside>
                 
-                <aside id="login" class="big-button">
-                    <a href="login.html">Login</a>
-                </aside>
+                <?php 
+                    session_start();
+                    if (!isset($_SESSION['UserID'])) {
+                        echo '<aside id="login" class="big-button">';
+                        echo '<a href="login.html">Login</a>';
+                        echo '</aside>';
+                    } else {
+                        echo '<aside id="login" class="big-button">';
+                        echo '<a href="logout.php">Logout</a>';
+                        echo '</aside>';
+                    }
+                ?>
 
                 <aside id="register" class="big-button">
                     <a href="registration.html">Register</a>

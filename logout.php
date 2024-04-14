@@ -29,7 +29,15 @@
                 <form>
                     <fieldset>
                     <?php
-                        echo "Testing";
+                        session_start();
+                        // reset session variables
+                        $_SESSION = [];
+                        session_destroy();
+                        if (!isset($_SESSION['UserID'])) {
+                            echo "<p>You are now logged out.</p>";
+                        } else {
+                            echo "<p>Something went wrong.</p>";
+                        }
                     ?>
                     </fieldset>
                 </form>

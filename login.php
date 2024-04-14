@@ -26,13 +26,15 @@
 
         <div id="main-content">
             <section id="login">
-                <form action="login.php" method="POST">
+                <form>
                     <fieldset>
                     <?php
                         $servername = "127.0.0.1";
                         $username = "root";
                         $password = "";
-                        $dbname = "userdatabase";
+                        $dbname = "portfoliodb";
+
+                        session_start();
 
                         // Creates connection
                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,12 +44,13 @@
                             die("Connection failed: " . $conn->connect_error);
                         }
 
+                        $foundUser = false;
+
                         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             $email = $_POST["email"];
                             $pass1 = $_POST["password"];   
-                            $sql = "SELECT * FROM USERS";
+                            $sql = "SELECT * FROM users";
                             $result = $conn->query($sql);
-                            $foundUser = false;
                             while ($row = $result->fetch_assoc()) {
                                 if ($row["email"] === $email && $row["password"] === $pass1) {
                                     echo "<p>Welcome ";
@@ -63,8 +66,7 @@
                             if ($foundUser == false) {
                                 echo "<p> User not found. </p?";
                             } else {
-                                session_start();
-                                $_SESSION['UserID'] = "this_session";
+                                $_SESSION['UserID'] = true;
                             }
 
                             $conn->close();

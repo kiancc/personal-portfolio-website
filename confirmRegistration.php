@@ -36,7 +36,7 @@
                             $servername = "127.0.0.1";
                             $username = "root";
                             $password = "";
-                            $dbname = "userdatabase";
+                            $dbname = "portfoliodb";
 
                             // Creates connection
                             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -51,7 +51,7 @@
                                 $sname = $_POST["lastName"];
                                 $email = $_POST["email"];
                                 $pass1 = $_POST["password"];   
-                                $sql = "INSERT INTO USERS (firstName, lastName, email, password)
+                                $sql = "INSERT INTO users (firstName, lastName, email, password)
                                 VALUES ('$fname', '$sname', '$email', '$pass1')";
                                 if ($conn->query($sql) === TRUE) {
                                 //YOUR CODE GOES HERE

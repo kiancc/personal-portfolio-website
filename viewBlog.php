@@ -36,10 +36,11 @@
                 <article id="blog-entries">
                     <!-- PHP code to connect to db and display blog entries -->
                     <?php
+                        session_start();
                         $servername = "127.0.0.1";
                         $username = "root";
                         $password = "";
-                        $dbname = "blogentries";
+                        $dbname = "portfoliodb";
 
                         // Creates connection
                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -52,8 +53,9 @@
                         // grabs entries from db and displays them
                         $sql = "SELECT * FROM blogentries";
                         $result = $conn->query($sql);
+                        // redirects to addpost if logged in <-- check whether to implement
+                        // redirects to login.html if no entries
                         if ($result->num_rows == 0) {
-                            // redirects to login.html if no entries
                             header("Location: login.html");
                             exit;
                         }
