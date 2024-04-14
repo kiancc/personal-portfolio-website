@@ -50,11 +50,11 @@
                             $foundUser = false;
                             while ($row = $result->fetch_assoc()) {
                                 if ($row["email"] === $email && $row["password"] === $pass1) {
-                                    echo "Welcome ";
+                                    echo "<p>Welcome ";
                                     echo $row["firstName"];
                                     echo " ";
                                     echo $row["lastName"];
-                                    echo "</br>";
+                                    echo "</p></br>";
                                     $foundUser = true;
                                 }
                                 break;
@@ -62,6 +62,9 @@
 
                             if ($foundUser == false) {
                                 echo "<p> User not found. </p?";
+                            } else {
+                                session_start();
+                                $_SESSION['UserID'] = "this_session";
                             }
 
                             $conn->close();
