@@ -12,19 +12,18 @@
 </head>
 <body>
     <div id="container">
-    <header id="title">
+        <header id="title">
             <a href="index.php"><h1><strong>Kian Christian Chong</strong></h1></a>
             <nav id="page-navigation">
                 <ul>
                     <li><a href="index.php">About Me</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="education.php">Education</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="experience.php">Experience</a></li>
                     <li><a href="viewBlog.php">Blog</a></li>
                 </ul>
             </nav>
         </header>
-
 
         <div id="main-content">
             <section id="login">

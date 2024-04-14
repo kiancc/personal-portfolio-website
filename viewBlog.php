@@ -10,18 +10,18 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
 </head>
 <body>
-    <header id="title">
-        <a href="index.php"><h1><strong>Kian Christian Chong</strong></h1></a>
-        <nav id="page-navigation">
-            <ul>
-                <li><a href="index.php">About Me</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="viewBlog.php">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header id="title">
+            <a href="index.php"><h1><strong>Kian Christian Chong</strong></h1></a>
+            <nav id="page-navigation">
+                <ul>
+                    <li><a href="index.php">About Me</a></li>
+                    <li><a href="education.php">Education</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="experience.php">Experience</a></li>
+                    <li><a href="viewBlog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <div id="main-content">          
             <div id="blog-container">
@@ -75,7 +75,7 @@
                 </article>
             </div>
         </div>
-        
+
         <footer id="footer">
             <section id="log-footer">
                 <p>Kian Chong 2024 &copy;</p>
