@@ -11,10 +11,10 @@
 </head>
 <body>
     <header id="title">
-        <a href="index.html"><h1><strong>Kian Christian Chong</strong></h1></a>
+        <a href="index.php"><h1><strong>Kian Christian Chong</strong></h1></a>
         <nav id="page-navigation">
             <ul>
-                <li><a href="index.html#about-me">About Me</a></li>
+                <li><a href="index.php">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="experience.html">Experience</a></li>
