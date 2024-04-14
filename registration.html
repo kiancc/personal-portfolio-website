@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="js/confirmpassword.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <header id="title">
+            <a href="index.html"><h1><strong>Kian Christian Chong</strong></h1></a>
+            <nav id="page-navigation">
+                <ul>
+                    <li><a href="index.html#index-container">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="viewBlog.php">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="register">
+            <section id="login">
+                <form action="confirmRegistration.php" method="POST" id="register">
+                    <fieldset>
+                        <legend><strong>Register</strong></legend>
+                        <label>First Name</label>
+                        <p><input type="text" placeholder="First Name" id="firstName" name="firstName"required></p>
+                        <label>Last Name</label>
+                        <p>
+                            <input type="text" placeholder="Last Name" id="lastName" name="lastName" required>
+                        </p>
+                        <label>Email</label>
+                        <p>
+                            <input type="email" placeholder="E-Mail" id="email" name="email" required>
+                        </p>
+                        <label>Password</label>
+                        <p>
+                            <input type="password" placeholder="Password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, and be at least 8 characters long.">
+                        </p>
+                        <label>Confirm Password</label>
+                        <p>
+                            <input type="password" placeholder="Confirm Password" id="confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, and be at least 8 characters long.">
+                        </p>
+                        <p>
+                            <input type="submit" value="Submit" id="submit">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <section id="signature">
+                <p>Kian Chong 2024 &copy;</p>
+            </section>
+        </footer>
+    </div>
+
+</body>
+</html>
