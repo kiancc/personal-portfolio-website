@@ -101,7 +101,7 @@
                             }
 
                             foreach ($comments as $comment) {
-                                if ($_SESSION["UserID"] == "admin") {
+                                if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
                                     echo '<p>'.$comment[0].': '.$comment[1].', '.$comment[2].'</p>';
                                     echo '<form action="deletecomment.php" method="POST">
                                     <input type="hidden" name="comment-id" value="'.$comment[3].'">
@@ -120,7 +120,7 @@
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
                             echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
-                            if ($_SESSION["UserID"] == "admin") {
+                            if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
                                 echo '<form action="deletepost.php" method="POST">
                                 <input type="hidden" name="blog-id" value="'.$entry[3].'">
                                 <p><input type="submit" value="Delete" class="delete-blogpost"></p></form>';
