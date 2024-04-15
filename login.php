@@ -62,6 +62,7 @@
                                         $_SESSION['UserID'] = "admin";
                                     } else {
                                         $_SESSION['UserID'] = "visitor";
+                                        $_SESSION['VisitorName'] = $row["firstName"] . " " . $row["lastName"];
                                     }
 
                                     $foundUser = true;
