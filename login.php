@@ -67,6 +67,7 @@
                                 echo "<p> User not found. </p?";
                             } else {
                                 $_SESSION['UserID'] = true;
+                                header("Location: addpost.html");
                             }
 
                             $conn->close();
