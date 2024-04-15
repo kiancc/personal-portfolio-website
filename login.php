@@ -31,7 +31,7 @@
                     <?php
                         $servername = "127.0.0.1";
                         $username = "root";
-                        $password = "root";
+                        $password = "";
                         $dbname = "portfoliodb";
 
                         session_start();
@@ -66,7 +66,7 @@
                             if ($foundUser == false) {
                                 echo "<p> User not found. </p?";
                             } else {
-                                if ($email == "kiancc97@gmail.com") {
+                                if ($email == "kiancc97@gmail.com" || $email == "ec23152@gmail.com" || "kianchristianchong@gmail.com") {
                                     $_SESSION['UserID'] = "admin";
                                 } else {
                                     $_SESSION['UserID'] = "visitor";
