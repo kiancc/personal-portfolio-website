@@ -68,10 +68,11 @@
                             } else {
                                 if ($email == "kiancc97@gmail.com" || $email == "ec23152@gmail.com" || "kianchristianchong@gmail.com") {
                                     $_SESSION['UserID'] = "admin";
+                                    header("Location: addpost.html");
                                 } else {
                                     $_SESSION['UserID'] = "visitor";
+                                    header("Location: index.php");
                                 }
-                                header("Location: addpost.html");
                             }
 
                             $conn->close();
