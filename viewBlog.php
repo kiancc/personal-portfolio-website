@@ -28,15 +28,19 @@
 
                 <article id="blog-title" class="card">
                     <h1 >Blog</h1>
-                    <aside class="big-button">
-                        <a href="addpost.html">Add Post</a>
-                    </aside>
+                    <?php 
+                        session_start();
+                        if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
+                            echo '<aside class="big-button">
+                                <a href="addpost.html">Add Post</a>
+                            </aside>';
+                        }
+                    ?>
                 </article>
 
                 <article id="blog-entries">
                     <!-- PHP code to connect to db and display blog entries -->
                     <?php
-                        session_start();
                         $servername = "127.0.0.1";
                         $username = "root";
                         $password = "";
@@ -56,9 +60,10 @@
                         // redirects to addpost if logged in <-- check whether to implement
                         // redirects to login.html if no entries
                         if ($result->num_rows == 0) {
-                            header("Location: login.php");
+                            header("Location: login.html");
                             exit;
                         }
+                        
                         while ($row = $result->fetch_assoc()) {
                         
                             echo '<div class="blog-entry">
