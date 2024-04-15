@@ -70,7 +70,7 @@
                         }
                         
                         while ($row = $result->fetch_assoc()) {
-                            $entries[] = array($row["dateTime"], $row["title"], $row["text"]);
+                            $entries[] = array($row["dateTime"], $row["title"], $row["text"], $row["ID"]);
                         }
 
                         // **************************************
@@ -86,16 +86,23 @@
 
                         // **************************************
                         
-                        /*
-                        function displayComments() {
+                        
+                        function displayComments($key, $conn) {
                             // grabs entries from db and stores in an array
-                            $sql = "SELECT * FROM comments WHERE matches some primary key from blog entries db";
+                            $sql = "SELECT * FROM comments;";
                             $commentResult = $conn->query($sql);
+                            $comments = array();
 
-                            while ($row = $result->fetch_assoc()) {
-                                $entries[] = array($row["dateTime"], $row["title"], $row["text"]);
+                            while ($row = $commentResult->fetch_assoc()) {
+                                if ($row["blogID"] == $key) {
+                                    $comments[] = array($row["name"], $row["comment"], $row["dateTime"]);
+                                }
                             }
-                        }*/
+
+                            foreach ($comments as $comment) {
+                                echo '<p>'.$comment[0].': '.$comment[1].', '.$comment[2].'</p>';
+                            }
+                        }
 
                         $index = 0;
 
@@ -113,8 +120,8 @@
                             //echo '<button id="comment-button">Add Comment</button>';
                             echo '<div class="comment-section"><h2>Comments:</h2>';
                             // add function that displays comments from comments db
-                            //displayComments();
-                            echo '<p>This is a comment!</p></div>';
+                            displayComments($entry[3], $conn);
+                            echo '</div>';
                             echo '</div>';
                             $index++;
                         }
