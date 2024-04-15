@@ -22,7 +22,7 @@
             exit;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        }js/
         $conn->close();
     }
 ?>
