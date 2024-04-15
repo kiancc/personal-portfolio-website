@@ -84,8 +84,9 @@
                         foreach ($entries as $entry) {
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
-                            echo '<h2><strong>' . $entry[1] . '</strong></h2>';
-                            echo '<p id="date">' . $entry[0] . '</p>';
+                            echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
+                            echo '<p id="date">' . $entry[0] . '</p></div>';
+                            echo '<div><button>Add Comment</button></div>';
                             echo '</div>';
                             echo '<hr>';
                             echo '<p class="p1">' . $entry[2] . '</p>';
