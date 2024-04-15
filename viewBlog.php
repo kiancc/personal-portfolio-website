@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/form-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="js/comments.js" defer></script>
 </head>
 <body>
         <header id="title">
@@ -33,6 +34,10 @@
                         if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
                             echo '<aside class="big-button">
                                 <a href="addpost.html">Add Post</a>
+                            </aside>';
+                        } else if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "visitor") {
+                            echo '<aside class="big-button">
+                                <a href="addcomment.php">Add Comment</a>
                             </aside>';
                         }
                     ?>
@@ -80,19 +85,41 @@
                         
                         usort($entries, 'sortByDateTimeDesc');
 
+                        // **************************************
+                        
+                        /*
+                        function displayComments() {
+                            // grabs entries from db and stores in an array
+                            $sql = "SELECT * FROM comments WHERE matches some primary key from blog entries db";
+                            $commentResult = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                $entries[] = array($row["dateTime"], $row["title"], $row["text"]);
+                            }
+                        }*/
+
+                        $index = 0;
+
                         // Output the sorted entries
                         foreach ($entries as $entry) {
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
                             echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
                             echo '<p id="date">' . $entry[0] . '</p></div>';
-                            echo '<div><button>Add Comment</button></div>';
                             echo '</div>';
                             echo '<hr>';
                             echo '<p class="p1">' . $entry[2] . '</p>';
+                            //echo '<button id="comment-button'. $index .'"><p>Comment</p></button>';
+                            echo '<hr>';
+                            //echo '<button id="comment-button">Add Comment</button>';
+                            echo '<div class="comment-section"><h2>Comments:</h2>';
+                            // add function that displays comments from comments db
+                            //displayComments();
+                            echo '<p>This is a comment!</p></div>';
                             echo '</div>';
+                            $index++;
                         }
-                        // **************************************
+                        
 
                         $conn->close();
                     ?>
