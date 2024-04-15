@@ -59,8 +59,8 @@
                                     echo $row["lastName"];
                                     echo "</p></br>";
                                     $foundUser = true;
+                                    break;
                                 }
-                                break;
                             }
 
                             if ($foundUser == false) {
