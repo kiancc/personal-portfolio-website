@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/form-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="js/confirmdelete.js" defer></script>
 </head>
 <body>
         <header id="title">
@@ -95,12 +96,20 @@
 
                             while ($row = $commentResult->fetch_assoc()) {
                                 if ($row["blogID"] == $key) {
-                                    $comments[] = array($row["name"], $row["comment"], $row["dateTime"]);
+                                    $comments[] = array($row["name"], $row["comment"], $row["dateTime"], $row["ID"]);
                                 }
                             }
 
                             foreach ($comments as $comment) {
-                                echo '<p>'.$comment[0].': '.$comment[1].', '.$comment[2].'</p>';
+                                if ($_SESSION["UserID"] == "admin") {
+                                    echo '<p>'.$comment[0].': '.$comment[1].', '.$comment[2].'</p>';
+                                    echo '<form action="deletecomment.php" method="POST">
+                                    <input type="hidden" name="comment-id" value="'.$comment[3].'">
+                                    <p><input type="submit" value="Delete" class="delete-comment"></p></form>';
+                                } else {
+                                    echo '<p>'.$comment[0].': '.$comment[1].', '.$comment[2].'</p>';
+                                }
+                                
                             }
                         }
 
@@ -111,6 +120,11 @@
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
                             echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
+                            if ($_SESSION["UserID"] == "admin") {
+                                echo '<form action="deletepost.php" method="POST">
+                                <input type="hidden" name="blog-id" value="'.$entry[3].'">
+                                <p><input type="submit" value="Delete" class="delete-blogpost"></p></form>';
+                            }
                             echo '<p id="date">' . $entry[0] . '</p></div>';
                             echo '</div>';
                             echo '<hr>';
