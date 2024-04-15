@@ -75,7 +75,7 @@ td {
     font-weight: 500;
 }
 
-#title nav a:hover, .big-button a:hover{
+#title nav a:hover, .big-button a:hover {
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }
@@ -439,4 +439,17 @@ table {
 #add-blog #post-title {
     font-size: 3vh;
 }
+/* ------------------------------------- */
+
+/* ------------------------------------- */
+/* styling for comments                  */
+/* ------------------------------------- */
+/* this centralises the blog form*/
+
+
+.comment-section p {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
 /* ------------------------------------- */
