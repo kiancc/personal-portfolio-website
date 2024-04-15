@@ -54,9 +54,10 @@
                             die("Connection failed: " . $conn->connect_error);
                         }
                         
-                        // grabs entries from db and displays them
+                        // grabs entries from db and stores in an array
                         $sql = "SELECT * FROM blogentries";
                         $result = $conn->query($sql);
+                        $entries = array();
                         // redirects to addpost if logged in <-- check whether to implement
                         // redirects to login.html if no entries
                         if ($result->num_rows == 0) {
@@ -65,16 +66,33 @@
                         }
                         
                         while ($row = $result->fetch_assoc()) {
-                        
-                            echo '<div class="blog-entry">
-                                    <div class="sub-blog-title">
-                                        <h2><strong>'.$row['title'].'</strong></h2>
-                                        <p id="date">'.$row['dateTime'].'</p>
-                                    </div>
-                                    <hr>
-                                    <p class="p1">'.$row['text'].'</p>
-                                </div>';
+                            $entries[] = array($row["dateTime"], $row["title"], $row["text"]);
                         }
+
+                        // **************************************
+                        // sorting algorithm developed by ChatGPT
+                        // **************************************
+                        
+                        // Function to compare two entries based on their dateTime
+                        function sortByDateTimeDesc($a, $b) {
+                            return strtotime($b[0]) - strtotime($a[0]);
+                        }
+                        
+                        usort($entries, 'sortByDateTimeDesc');
+
+                        // Output the sorted entries
+                        foreach ($entries as $entry) {
+                            echo '<div class="blog-entry">';
+                            echo '<div class="sub-blog-title">';
+                            echo '<h2><strong>' . $entry[1] . '</strong></h2>';
+                            echo '<p id="date">' . $entry[0] . '</p>';
+                            echo '</div>';
+                            echo '<hr>';
+                            echo '<p class="p1">' . $entry[2] . '</p>';
+                            echo '</div>';
+                        }
+                        // **************************************
+
                         $conn->close();
                     ?>
                 </article>
