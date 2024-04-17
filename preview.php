@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/form-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-    <script src="js/confirmdelete.js" defer></script>
+    <script src="js/preview.js" defer></script>
 </head>
 <body>
         <header id="title">
@@ -43,6 +43,27 @@
                 </article>
 
                 <article id="blog-entries">
+
+                    <div class="blog-entry">
+                        <div class="sub-blog-title">
+                            <div>
+                                <h2><strong id="preview-title"></strong></h2>
+                                <p id="date">
+                                    <?php 
+                                        $d = date("Y-m-d H:i:s");
+                                        echo $d;
+                                    ?>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="p1" id="preview-text"></p>
+                        <p>
+                            <input type="submit" id=submit value="Post">
+                            <input type="button" id="clear" value="Clear">
+                        </p>
+                    </div>
+
                     <!-- PHP code to connect to db and display blog entries -->
                     <?php
                         $servername = "127.0.0.1";
@@ -118,17 +139,13 @@
                         foreach ($entries as $entry) {
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
-                            
+                            echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
                             if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
-                                echo '<div id="b-title"><h2><strong>' . $entry[1] . '</strong></h2>';
                                 echo '<form action="deletepost.php" method="POST">
                                 <input type="hidden" name="blog-id" value="'.$entry[3].'">
-                                <p><input type="submit" value="Delete" class="delete-blogpost"></p></form></div>';
-                                echo '<p id="date">' . $entry[0] . '</p>';
-                            } else {
-                                echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
-                                echo '<p id="date">' . $entry[0] . '</p></div>';
+                                <p><input type="submit" value="Delete" class="delete-blogpost"></p></form>';
                             }
+                            echo '<p id="date">' . $entry[0] . '</p></div>';
                             echo '</div>';
                             echo '<hr>';
                             echo '<p class="p1">' . $entry[2] . '</p>';

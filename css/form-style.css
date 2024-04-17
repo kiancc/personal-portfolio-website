@@ -42,19 +42,23 @@ textarea {
 
 #login input[type="Submit"], input[type="Reset"], #add-blog input[type="Submit"], #add-blog input[type="button"], #register-button p {
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     background-color: azure;
     width: 10rem;   
-    padding: 0.3rem;
     border: 0.2rem solid black;
     border-radius: 1rem;
 }
 
-#login input[type="Submit"]:hover, input[type="Reset"]:hover, #add-blog input[type="Submit"]:hover, #add-blog input[type="button"]:hover {
+#login input[type="Submit"]:hover, 
+input[type="Reset"]:hover, 
+#add-blog input[type="Submit"]:hover, 
+#add-blog input[type="button"]:hover, 
+#preview-button:hover, 
+.comment-container input[type="submit"]:hover, 
+#b-title input[type="submit"]:hover {
     background-color: rgb(250, 219, 179);
     cursor: pointer;
 }

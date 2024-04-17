@@ -439,17 +439,48 @@ table {
 #add-blog #post-title {
     font-size: 3vh;
 }
+
+button  {
+    display: none;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: azure;
+    width: 10rem;   
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    margin-bottom: 0.5em;
+}
+
 /* ------------------------------------- */
 
 /* ------------------------------------- */
 /* styling for comments                  */
 /* ------------------------------------- */
-/* this centralises the blog form*/
 
-
-.comment-section p {
-    font-size: 1.5em;
-    font-weight: 400;
+.comment-container {
+    display: flex;
 }
 
+.comment {
+    font-size: 1.5em;
+}
+
+#b-title {
+    display: flex;
+}
+.comment-container input[type="submit"], #b-title input[type="submit"] {
+    margin-top: 0.4em;
+    margin-left: 1em;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: azure;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+}
 /* ------------------------------------- */
+
