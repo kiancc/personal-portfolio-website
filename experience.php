@@ -24,6 +24,8 @@
             </nav>
         </header>
 
+        <?php session_start(); ?>
+
         <div id="main-content">
             <div id="experience-container">
 

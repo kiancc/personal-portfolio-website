@@ -81,7 +81,7 @@
             session_start();
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $key = $_POST["select-blog"];
-                $comment = $_POST["comment-text"];
+                $comment  = str_replace("'", '"', $_POST["comment-text"]);
                 $time = date("Y-m-d H:i:s");
                 $name = $_SESSION['VisitorName'];
                 $sql = "INSERT INTO comments (blogID, comment, dateTime, name)
