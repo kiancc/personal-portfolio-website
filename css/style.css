@@ -82,7 +82,6 @@ td {
 
 /* Styling for footer element*/
 #footer {
-    display: flex;
     align-items: center;
     background-color: white;
     border-top: 0.15rem solid black;
@@ -92,14 +91,19 @@ td {
     width: 100%;
 }
 
+#log-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 #footer p {
     font-size: 1rem;
 }
 
-#footer #log-footer input {
-    border: none;
-    color: inherit;
-    font: inherit;
+#footer #log-footer a:hover {
+    color: red;
 }
 /* ----------------------------------------- */
 

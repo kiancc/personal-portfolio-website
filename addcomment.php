@@ -99,7 +99,14 @@
     </div>
 
         <footer id="footer">
-            <section id="signature">
+            <section id="log-footer"> 
+                <?php 
+                    if(!isset($_SESSION['UserID'])) {
+                        echo '<a href="login.html">Login</a>';
+                    } else {
+                        echo '<p>Welcome, '. $_SESSION["VisitorName"].'</p><a href="logout.php">Logout</a>';
+                    }
+                ?>
                 <p>Kian Chong 2024 &copy;</p>
             </section>
         </footer>

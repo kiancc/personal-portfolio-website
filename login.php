@@ -60,6 +60,7 @@
                                     echo "</p></br>";
                                     if ($email === "kiancc97@gmail.com" || $email === "ec23152@qmul.ac.uk" || $email === "kianchristianchong@gmail.com") {
                                         $_SESSION['UserID'] = "admin";
+                                        $_SESSION["VisitorName"] = "admin";
                                     } else {
                                         $_SESSION['UserID'] = "visitor";
                                         $_SESSION['VisitorName'] = $row["firstName"] . " " . $row["lastName"];
@@ -90,7 +91,14 @@
         </div>
 
         <footer id="footer">
-            <section id="signature">
+            <section id="log-footer"> 
+                <?php 
+                    if(!isset($_SESSION['UserID'])) {
+                        echo '<a href="login.html">Login</a>';
+                    } else {
+                        echo '<p>Welcome, '. $_SESSION["VisitorName"].'</p><a href="logout.php">Logout</a>';
+                    }
+                ?>
                 <p>Kian Chong 2024 &copy;</p>
             </section>
         </footer>

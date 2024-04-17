@@ -82,15 +82,15 @@
         </aside>
 -->
         <footer id="footer">
-            <section id="log-footer">
-                <p>Kian Chong 2024 &copy;</p>
+            <section id="log-footer"> 
                 <?php 
                     if(!isset($_SESSION['UserID'])) {
                         echo '<a href="login.html">Login</a>';
                     } else {
-                        echo '<a href="logout.php">Logout</a>';
+                        echo '<p>Welcome, '. $_SESSION["VisitorName"].'</p><a href="logout.php">Logout</a>';
                     }
                 ?>
+                <p>Kian Chong 2024 &copy;</p>
             </section>
         </footer>
     </div>
