@@ -6,26 +6,16 @@ const button = document.getElementById('preview-button');
 
 // code to check if both input fields have text and display the preview button
 function checkInputs() {
-    if (title.value.trim() !== '' && text.value.trim() !== '') {
-        button.style.display = 'inline-block';
-    } else {
+    if (title.value.trim() == '' && text.value.trim() == '') {
         button.style.display = 'none';
+    } else {
+        button.style.display = 'inline-block';
     }
 }
 title.addEventListener('input', checkInputs);
 text.addEventListener('input', checkInputs);
 // ----------------------------
 
-// code to redirect to preview page and sends title and text
-// ----------------------------
-function redirectToPage() {
-    localStorage.setItem('preview-title', title.value);
-    localStorage.setItem('preview-text', text.value);
-    window.location.href = 'preview.php';
-}
-
-button.addEventListener('click', redirectToPage);
-// ----------------------------
 
 
 // code for clearing the add blog form

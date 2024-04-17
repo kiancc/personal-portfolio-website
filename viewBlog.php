@@ -32,7 +32,7 @@
                         session_start();
                         if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
                             echo '<aside class="big-button">
-                                <a href="addpost.html">Add Post</a>
+                                <a href="addpost.php">Add Post</a>
                             </aside>';
                         } else if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "visitor") {
                             echo '<aside class="big-button">

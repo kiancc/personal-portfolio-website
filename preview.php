@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/form-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-    <script src="js/preview.js" defer></script>
+    <!--<script src="js/preview.js" defer></script>-->
 </head>
 <body>
         <header id="title">
@@ -27,7 +27,7 @@
         <div id="main-content">          
             <div id="blog-container">
                 <article id="blog-title" class="card">
-                    <h1 >Blog</h1>
+                    <h1>Preview</h1>
                     <?php 
                         session_start();
                         if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
@@ -44,10 +44,10 @@
 
                 <article id="blog-entries">
 
-                    <div class="blog-entry">
+                    <div class="blog-entry" id="preview-blog">
                         <div class="sub-blog-title">
                             <div>
-                                <h2><strong id="preview-title"></strong></h2>
+                                <h2><strong id="preview-title"><?php echo $_SESSION["blog-title"];?></strong></h2>
                                 <p id="date">
                                     <?php 
                                         $d = date("Y-m-d H:i:s");
@@ -57,12 +57,53 @@
                             </div>
                         </div>
                         <hr>
-                        <p class="p1" id="preview-text"></p>
-                        <p>
-                            <input type="submit" id=submit value="Post">
-                            <input type="button" id="clear" value="Clear">
-                        </p>
+                        <p class="p1" id="preview-text"><?php echo $_SESSION["blog-text"];?></p>
+                        <form method="POST">
+                            <p>
+                                <input type="submit" id=submit-button name="submit-button" value="Post">
+                                <input type="submit" id="edit-button" name="edit-button" value="Edit">
+                            </p>
+                        </form>
                     </div>
+
+                    <?php
+                        if (isset($_POST['edit-button'])) {
+                            header("Location: addpost.php" );
+                            exit;
+                        } else if (isset($_POST['submit-button'])) {
+                            // connect to db and post 
+                            $servername = "127.0.0.1";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "portfoliodb";
+                
+                            // Creates connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                            // Checks connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+                
+                            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                $text = $_SESSION["blog-text"];
+                                $title = $_SESSION["blog-title"];
+                                $time = date("Y-m-d H:i:s");
+                                $sql = "INSERT INTO blogentries (title, text, dateTime)
+                                VALUES ('$title', '$text', '$time')";
+                                if ($conn->query($sql) === TRUE) {
+                                    // redirects to viewblog
+                                    unset($_SESSION["blog-title"]);
+                                    unset($_SESSION["blog-text"]);
+                                    header("Location: viewBlog.php");
+                                    exit;
+                                } else {
+                                    echo "Error: " . $sql . "<br>" . $conn->error;
+                                }
+                                $conn->close();
+                            }
+                        }
+                    ?>
 
                     <!-- PHP code to connect to db and display blog entries -->
                     <?php
@@ -139,13 +180,17 @@
                         foreach ($entries as $entry) {
                             echo '<div class="blog-entry">';
                             echo '<div class="sub-blog-title">';
-                            echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
+                            
                             if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
+                                echo '<div id="b-title"><h2><strong>' . $entry[1] . '</strong></h2>';
                                 echo '<form action="deletepost.php" method="POST">
                                 <input type="hidden" name="blog-id" value="'.$entry[3].'">
-                                <p><input type="submit" value="Delete" class="delete-blogpost"></p></form>';
+                                <p><input type="submit" value="Delete" class="delete-blogpost"></p></form></div>';
+                                echo '<p id="date">' . $entry[0] . '</p>';
+                            } else {
+                                echo '<div><h2><strong>' . $entry[1] . '</strong></h2>';
+                                echo '<p id="date">' . $entry[0] . '</p></div>';
                             }
-                            echo '<p id="date">' . $entry[0] . '</p></div>';
                             echo '</div>';
                             echo '<hr>';
                             echo '<p class="p1">' . $entry[2] . '</p>';
