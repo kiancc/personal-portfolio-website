@@ -66,10 +66,14 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
+            if (isset($_POST['clear'])) {
+                unset($_SESSION["blog-title"]);
+                unset($_SESSION["blog-text"]);
+            }
+
             if (isset($_POST['preview-button'])) {
                 $_SESSION["blog-title"] = $_POST["title"];
                 $_SESSION["blog-text"] = str_replace("'", '"', $_POST["blog-text"]);
-                $_SESSION["time"] = date("Y-m-d H:i:s");
                 header("Location: preview.php");
             }
 
