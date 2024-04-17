@@ -75,7 +75,7 @@
                                 echo "<p> User not found. </p?";
                             } else {
                                 if ($_SESSION['UserID'] == "admin") {
-                                    header("Location: addpost.html");
+                                    header("Location: addpost.php");
                                 } else {
                                     header("Location: index.php");
                                 }

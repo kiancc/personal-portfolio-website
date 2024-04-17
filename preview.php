@@ -28,18 +28,6 @@
             <div id="blog-container">
                 <article id="blog-title" class="card">
                     <h1>Preview</h1>
-                    <?php 
-                        session_start();
-                        if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "admin") {
-                            echo '<aside class="big-button">
-                                <a href="addpost.html">Add Post</a>
-                            </aside>';
-                        } else if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] == "visitor") {
-                            echo '<aside class="big-button">
-                                <a href="addcomment.php">Add Comment</a>
-                            </aside>';
-                        }
-                    ?>
                 </article>
 
                 <article id="blog-entries">
