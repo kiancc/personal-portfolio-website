@@ -35,7 +35,7 @@
                     <div class="blog-entry" id="preview-blog">
                         <div class="sub-blog-title">
                             <div>
-                                <h2><strong id="preview-title"><?php echo $_SESSION["blog-title"];?></strong></h2>
+                                <h2><strong id="preview-title"><?php session_start(); echo $_SESSION["blog-title"];?></strong></h2>
                                 <p id="date">
                                     <?php 
                                         $d = date("Y-m-d H:i:s");
