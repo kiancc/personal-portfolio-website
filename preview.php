@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/form-style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-    <!--<script src="js/preview.js" defer></script>-->
 </head>
 <body>
         <header id="title">
