@@ -111,12 +111,6 @@
                         $sql = "SELECT * FROM blogentries";
                         $result = $conn->query($sql);
                         $entries = array();
-                        // redirects to addpost if logged in <-- check whether to implement
-                        // redirects to login.html if no entries
-                        if ($result->num_rows == 0) {
-                            header("Location: login.html");
-                            exit;
-                        }
                         
                         while ($row = $result->fetch_assoc()) {
                             $entries[] = array($row["dateTime"], $row["title"], $row["text"], $row["ID"]);

@@ -28,56 +28,42 @@
 
         <div id="main-content">
             <div id="project-container">
-                
+            <h1>Projects</h1>
                 <article id="projects" class="card">
-                    <h1>Projects</h1>
-                    <table>
-                        <tr>
-                            <td class="left-column">
-                                <section class="project" id="project-1">
-                                    <p class="p-title">Top 5 Attractions</p>
-                                    <figure>
-                                        <a href="https://github.com/kiancc/ECS417U/blob/main/topic5/exercise1.html">
-                                            <img src="images/topic5-exercise1.png" alt="" class="attraction-image"/>
-                                        </a>
-                                        
-                                    </figure>
-                                    <div class="project-caption">   
-                                        <p>A website showcasing my top 5 favourite attractions as part of topic5 exercise1</p>
-                                    </div>
-                                </section>
-                            </td>
+                    <section class="project" id="project-1">
+                        <p class="p-title">Top 5 Attractions</p>
+                        <figure>
+                            <a href="https://github.com/kiancc/ECS417U/blob/main/topic5/exercise1.html">
+                                <img src="images/topic5-exercise1.png" alt="" class="attraction-image"/>
+                            </a>
+                            
+                        </figure>
+                        <div class="project-caption">   
+                            <p>A website showcasing my top 5 favourite attractions as part of topic5 exercise1</p>
+                        </div>
+                    </section>
 
-                            <td class="right-column">
-                                <section class="project" id="project-2">
-                                    <p class="p-title">Udemy Web Scraping Project</p>
-                                    <figure>
-                                        <a href="https://github.com/kiancc/Udemy-Scraping-Project">
-                                            <img src="images/udemy_scraping_project.png" alt="" class="attraction-image"/>
-                                        </a>       
-                                    </figure>
-                                    <div class="project-caption">   
-                                        <p>A web scraper I built as part of a Udemy Python course</p>
-                                    </div>
-                                </section>
-                            </td>
-                        </tr>
+                    <section class="project" id="project-2">
+                        <p class="p-title">Udemy Web Scraping Project</p>
+                        <figure>
+                            <a href="https://github.com/kiancc/Udemy-Scraping-Project">
+                                <img src="images/udemy_scraping_project.png" alt="" class="attraction-image"/>
+                            </a>       
+                        </figure>
+                        <div class="project-caption">   
+                            <p>A web scraper I built as part of a Udemy Python course</p>
+                        </div>
+                    </section>
 
-                        <tr>
-                            <td class="left-column">
-                                <section class="project" id="project-3">
-                                    <p class="p-title">CS50 Exercises</p>
-                                    <figure>
-                                        <img src="images/CS50_screenshot.png" alt="" class="attraction-image"/>
-                                    </figure>
-                                    <div class="project-caption">   
-                                        <p>Exercises I've completed as part of Harvard's CS50 course</p>
-                                    </div>
-                                </section>
-                            </td>
-
-                        </tr>
-                    </table>
+                    <section class="project" id="project-3">
+                        <p class="p-title">CS50 Exercises</p>
+                        <figure>
+                            <img src="images/CS50_screenshot.png" alt="" class="attraction-image"/>
+                        </figure>
+                        <div class="project-caption">   
+                            <p>Exercises I've completed as part of Harvard's CS50 course</p>
+                        </div>
+                    </section>
                 </article>
             </div>
 
