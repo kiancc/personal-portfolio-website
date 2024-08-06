@@ -19,7 +19,6 @@
                     <li><a href="education.php">Education</a></li>
                     <li><a href="projects.php">Projects</a></li>
                     <li><a href="experience.php">Experience</a></li>
-                    <li><a href="viewBlog.php">Blog</a></li>
                 </ul>
             </nav>
         </header>
@@ -56,18 +55,7 @@
                     </section>
                 </aside>
                 
-                <?php 
-                    session_start();
-                    if (!isset($_SESSION['UserID'])) {
-                        echo '<aside id="login" class="big-button">';
-                        echo '<a href="login.html">Login</a>';
-                        echo '</aside>';
-                    } else {
-                        echo '<aside id="login" class="big-button">';
-                        echo '<a href="logout.php">Logout</a>';
-                        echo '</aside>';
-                    }
-                ?>
+
                 <!--
                 <aside id="register" class="big-button">
                     <a href="registration.html">Register</a>
@@ -77,12 +65,6 @@
 
         <footer id="footer">
             <section id="log-footer"> 
-                <?php 
-                    if(!isset($_SESSION['UserID'])) {
-                        echo '<a href="login.html">Login</a>';
-                    } else {
-                        echo '<p>Welcome, '. $_SESSION["VisitorName"].'</p><a href="logout.php">Logout</a>';
-                    }
                 ?>
                 <p>Kian Chong 2024 &copy;</p>
             </section>
